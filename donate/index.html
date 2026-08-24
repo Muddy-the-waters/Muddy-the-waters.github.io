@@ -10,8 +10,12 @@
         .card { background: #fff; max-width: 460px; width: 100%; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); padding: 28px 20px; text-align: center; }
         .avatar { width: 72px; height: 72px; border-radius: 50%; margin-bottom: 12px; border: 3px solid #f0f0f0; object-fit: cover; }
         h1 { font-size: 20px; font-weight: 700; margin-bottom: 6px; color: #111; }
-        p.subtitle { color: #666; font-size: 13px; margin-bottom: 20px; line-height: 1.5; }
+        p.subtitle { color: #666; font-size: 13px; margin-bottom: 14px; line-height: 1.5; }
         
+        /* 交流微信号样式 */
+        .contact-box { background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 10px; padding: 8px 14px; font-size: 13px; color: #475569; margin-bottom: 20px; display: inline-block; }
+        .wechat-tag { background: #e2e8f0; padding: 2px 8px; border-radius: 4px; font-family: monospace; font-weight: bold; color: #0f172a; margin-left: 4px; }
+
         /* 赞助二维码区域 */
         .sponsor-box { background: #fafafa; border: 1px solid #eee; border-radius: 12px; padding: 18px 12px; margin-bottom: 20px; }
         .sponsor-title { font-size: 14px; font-weight: 600; color: #444; margin-bottom: 14px; }
@@ -22,7 +26,7 @@
         .qr-wx { color: #07c160; }
         .qr-zfb { color: #1677ff; }
 
-        /* 资料说明与按钮 */
+        /* 说明与按钮 */
         .notice { background: #eef6ff; border: 1px solid #d0e5ff; padding: 14px; border-radius: 10px; font-size: 12.5px; color: #1e50a2; text-align: left; margin-bottom: 18px; line-height: 1.6; }
         .btn-submit { display: block; width: 100%; background: #0066ff; color: #fff; text-decoration: none; font-size: 15px; font-weight: 600; padding: 13px 0; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,102,255,0.2); transition: background 0.2s; }
         .btn-submit:hover { background: #0052cc; }
@@ -31,11 +35,16 @@
 </head>
 <body>
     <div class="card">
-        <!-- 顶部头像 -->
-        <img src="wx.jpg" class="avatar" alt="浑水摸鱼清源" onerror="this.src='../wx.jpg'">
+        <!-- 1. 顶部头像（优先读取 avatar.jpg，若未上传则自动回退显示 wx.jpg） -->
+        <img src="avatar.jpg" class="avatar" alt="浑水摸鱼清源" onerror="this.src='wx.jpg'">
         <h1>浑水摸鱼清源 🥤</h1>
         <p class="subtitle">感谢大家一路以来的真金白银与信任！<br>投资是一场长坡厚雪的旅程，希望能陪伴大家喝着可乐慢慢变富。</p>
         
+        <!-- 2. 微信号显示（替换这里的“你的微信号”） -->
+        <div class="contact-box">
+            💬 交流 / 合作微信号：<span class="wechat-tag">你的微信号</span>
+        </div>
+
         <!-- 扫码赞助板块 -->
         <div class="sponsor-box">
             <div class="sponsor-title">☕ 随喜赞助与创作支持</div>
@@ -58,8 +67,8 @@
             2. 点击下方按钮填写入门登记，提交后<strong>自动显示网盘链接与提取码</strong>。
         </div>
 
-        <!-- 替换为腾讯文档链接按钮 -->
-        <a href="https://docs.qq.com/form/page/DSHR5bVNmQmVpQ0hJ" class="btn-submit" target="_blank">📋 免赞助·直接登记领取资料</a>
+        <!-- 3. 替换为第一步复制的新腾讯文档链接 -->
+        <a href="https://docs.qq.com/form/page/DV3BkenJTbE9IcHpp" class="btn-submit" target="_blank">📋 免赞助·直接登记领取资料</a>
         
         <p class="footer-tips">赞助纯属自愿，无论是否打赏均可免费领取资料</p>
     </div>
